@@ -1,48 +1,22 @@
-import React from 'react';
-// import { capitalizeFirstLetter } from '../../utils/helpers';
+import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 
-function Nav(props) {
-    // const {
-    //   categories = [],
-    //   setCurrentCategory,
-    //   contactSelected,
-    //   currentCategory,
-    //   setContactSelected,
-    // } = props;
-  
-    return (
-      <header className="flex-row px-1">
-        <h2>
-          <a data-testid="link" href="/">
-            Tara Brichetto
-          </a>
-        </h2>
-        <nav>
-          <ul className="flex-row">
-            <li className="mx-2">
-              <a data-testid="about" href="#about">
-                About Me
-              </a>
-            </li>
-            <li className="mx-2">
-              <a data-testid="portfolio" href="portfolio">
-                Portfolio
-              </a>
-            </li>
-            <li className="mx-2">
-              <a data-testid="contact" href="contact">
-                Contact
-              </a>
-            </li>
-            <li className="mx-2">
-              <a data-testid="resume" href="resume">
-                Resume
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    );
+class Nav extends Component {
+  render () {
+  return (
+    <section>
+        <div>
+            <ul>
+                <Link to="/"><li>Home</li></Link>
+                <li><Link to="/about">About</Link></li>
+                <Link to="/contact"><li>Contact</li></Link>
+                <Link to="/portfolio"><li>Portfolio</li></Link>
+                <Link to="/resume"><li>Resume</li></Link>
+            </ul>
+      </div>
+    </section>
+  );
   }
+}
 
 export default Nav;

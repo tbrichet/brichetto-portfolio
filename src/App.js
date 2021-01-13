@@ -1,24 +1,43 @@
-// import React, { useState } from 'react';
-import './App.css';
-import About from './components/About';
-import Contact from './components/Contact';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Aboutpage from './pages/Aboutpage';
+import Contactpage from './pages/Contactpage';
+import Homepage from './pages/Homepage';
+import Portfoliopage from './pages/Portfoliopage';
+import Resumepage from './pages/Resumepage';
 import Nav from './components/Nav';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
+import Footer from './components/Footer';
+
 
 function App() {
 
   return (
-    <div>
-      <Nav>
-      </Nav>
-      <main>
-            <Portfolio></Portfolio>
-            <About></About>
-            <Resume></Resume>
-            <Contact></Contact>
-      </main>
-    </div>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path="/about">
+          <Aboutpage />
+        </Route>
+        <Route exact path="/contact">
+          <Contactpage />
+        </Route>
+        <Route exact path="/portfolio">
+          <Portfoliopage />
+        </Route>
+        <Route exact path="/resume">
+          <Resumepage />
+        </Route>
+        <Route path="/">
+          <Homepage />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
