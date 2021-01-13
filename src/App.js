@@ -13,7 +13,6 @@ import Resumepage from './pages/Resumepage';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
-
 function App() {
 
   return (
