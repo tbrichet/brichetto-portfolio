@@ -13,7 +13,7 @@ function Homeimage() {
               <div className="jumbo sm:text-center lg:text-left">
                 <h1 className="jumbo text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="jumbo block xl:inline">Tara Brichetto</span>
-                  <span className="jumbo block xl:inline" style={{color: "#7e6688"}}>Web Developer</span>
+                  <span className="jumbo block xl:inline" style={{color: "#7e6688", whiteSpace:"nowrap"}}>Web Developer</span>
                 </h1>
                 <p className="jumbo mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   Dedicated full stack web developer and recent graduate of the University of Arizona's coding bootcamp. Proven success working individually and in teams. Additional experience in education, finance, and business administration. Always learning, and always coding!
