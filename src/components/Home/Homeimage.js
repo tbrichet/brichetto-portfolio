@@ -16,7 +16,7 @@ function Homeimage() {
                   <span className="jumbo block xl:inline" style={{color: "#7e6688"}}>Web Developer</span>
                 </h1>
                 <p className="jumbo mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Dedicated full stack web developer and recent graduate of the University of Arizona's coding bootcamp. Proven success working individually and in teams. Additional experience in education, finance, and business administration. Always learning, and always coding!
+                  Dedicated full stack web developer and recent graduate of the University of Arizona's coding bootcamp. Proven success working individually and in teams with additional experience in education, finance, and business administration. Always learning, and always coding!
                 </p>
               </div>
             </main>
