@@ -1,15 +1,13 @@
 
-// import Carousel from 'react-bootstrap/Carousel';
-
 import React, { Component } from 'react';
 import RBCarousel from "react-bootstrap-carousel";
-import { Row, Col, Button, ButtonGroup } from "./bootstrap-component.jsx";
+import { Row, Col, Button} from "./bootstrap-component.jsx";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 import project1 from './project1.png';
 import project2 from './project2.png';
 import project3 from './project3.jpg';
+import './portfolio.css';
 
-const styles = { height: 400, width: "100%" };
 const icon_glass = <span className="fa fa-glass" />;
 const icon_music = <span className="fa fa-music" />;
 
@@ -18,7 +16,7 @@ class Portfoliodisplay extends Component {
     super(props);
     this.slider = React.createRef();
     this.state = {
-      autoplay: true,
+      autoplay: false,
     };
   }
   _onSelect = (active, direction) => {
@@ -47,9 +45,10 @@ class Portfoliodisplay extends Component {
   };
   render() {
     return (
-      <div className="container-fluid" style={{ paddingBottom: 20 }}>
-        <Row>
-          <Col span={12} style={{ marginTop: 20 }}>
+    <section style={{backgroundColor:"white"}}>
+      <div className="container-fluid" style={{ paddingBottom: 20, backgroundColor:"white"}}>
+        <Row style={{backgroundColor:"white"}}>
+          <Col span={12} style={{ marginTop: 20, backgroundColor:"white" }}>
             <RBCarousel
               animation={true}
               autoplay={this.state.autoplay}
@@ -60,24 +59,25 @@ class Portfoliodisplay extends Component {
               onSelect={this._onSelect}
               ref={this.slider}
               version={4}
+              style={{backgroundColor:"white"}}
             >
-              <div style={{ width: "100%", height: "75%" }}>
+              <div style={{ width: "100%", height: "75%", backgroundColor:"white"}}>
                 <img
-                  style={{ width: "50%", height: "50%", position: "relative" }}
+                  style={{ width: "100%", height: "100%", position: "relative" }}
                   src= {project1}
                 />
                 <div className="carousel-caption">Munch-A-Movie</div>
               </div>
               <div style={{ width: "100%", height: "75%" }}>
                 <img
-                  style={{ width: "50%", height: "50%", position: "relative" }}
+                  style={{ width: "100%", height: "100%", position: "relative" }}
                   src= {project2}
                 />
                 <div className="carousel-caption">MyHaus</div>
               </div>
               <div style={{ width: "100%", height: "75%" }}>
                 <img
-                  style={{ width: "50%", height: "50%", position: "relative" }}
+                  style={{ width: "100%", height: "100%", position: "relative" }}
                   src= {project3}
                 />
                 <div className="carousel-caption">Mamacitas Enchiladas</div>
@@ -90,53 +90,9 @@ class Portfoliodisplay extends Component {
               </Button>
         </Row>
       </div>
+    </section>
     );
   }
 }
 
-
-// export class Portfoliodisplay extends Component {  
-//   render() {  
-//     return (  
-//       <div>  
-//         <div class='container-fluid' >  
-//         <div className="row title" style={{ marginBottom: "20px" }} >  
-//         <div class="col-sm-12 btn btn-warning">  
-//                             How To Use Bootstrap Carousel In ReactJS 
-//                            </div>  
-//                            </div>  
-//                            </div>  
-//                            <div className='container-fluid' >  
-//                            <Carousel>  
-//                            <Carousel.Item style={{'height':"300px"}} >  
-//                            <img style={{'height':"300px"}}  
-//                            className="d-block w-100"  
-//                           src={ project1 }  />  
-//                              <Carousel.Caption>  
-//                                <h3>Munch a Movie </h3>  
-//                                    </Carousel.Caption>  
-//                                    </Carousel.Item  >  
-//                                    <Carousel.Item style={{'height':"300px"}}>  
-//                                    <img style={{'height':"300px"}}  
-//                                      className="d-block w-100"  
-//                                       src={ project2 }    />  
-//                                          <Carousel.Caption>  
-//                                      <h3>MyHaus</h3>  
-//                                         </Carousel.Caption>  
-//                                            </Carousel.Item>  
-//                                          <Carousel.Item style={{'height':"300px"}}>  
-//                                          <img style={{'height':"300px"}}  
-//                                           className="d-block w-100"  
-//                                            src={ project3 }   />  
-//                                           <Carousel.Caption>  
-//                                             <h3>Mamasita's Enchiladas</h3>  
-//                                             </Carousel.Caption>  
-//                                            </Carousel.Item>  
-//                                           </Carousel>  
-//                                   </div>  
-//                           </div>  
-//                   )  
-//           }  
-//   }  
-
-  export default Portfoliodisplay
+export default Portfoliodisplay

@@ -1,0 +1,13 @@
+.footer {
+    margin: 50px;
+    padding: 20px;
+    box-shadow: 0 50vh 0 50vh #667a88;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    display: inline-block;
+}

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './nav.css';
 
 class Nav extends Component {
   render () {
   return (
-    <section>
+    <section style={{backgroundColor:"#667a88"}}>
         <div>
             <ul>
-                <Link to="/"><li>Home</li></Link>
-                <li><Link to="/about">About</Link></li>
-                <Link to="/contact"><li>Contact</li></Link>
-                <Link to="/portfolio"><li>Portfolio</li></Link>
-                <Link to="/resume"><li>Resume</li></Link>
+                <NavLink exact to="/" activeStyle={{fontWeight: "800", fontStyle:"oblique"}}><li>Home</li></NavLink>
+                <NavLink exact to="/contact" activeStyle={{fontWeight: "800", fontStyle:"oblique"}}><li>Contact</li></NavLink>
+                <NavLink exact to="/portfolio" activeStyle={{fontWeight: "800", fontStyle:"oblique"}}><li>Portfolio</li></NavLink>
+                <NavLink exact to="/resume" activeStyle={{fontWeight: "800", fontStyle:"oblique"}}><li>Resume</li></NavLink>
             </ul>
       </div>
     </section>

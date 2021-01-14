@@ -5,7 +5,6 @@ import {
   Route
 } from "react-router-dom";
 
-import Aboutpage from './pages/Aboutpage';
 import Contactpage from './pages/Contactpage';
 import Homepage from './pages/Homepage';
 import Portfoliopage from './pages/Portfoliopage';
@@ -19,9 +18,6 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-        <Route exact path="/about">
-          <Aboutpage />
-        </Route>
         <Route exact path="/contact">
           <Contactpage />
         </Route>
