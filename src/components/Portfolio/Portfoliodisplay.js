@@ -5,7 +5,7 @@ import project2 from './project2.jpg';
 import project3 from './project3.jpg';
 import './portfolio.css';
 
-
+// Card format adapted from "Bootstrap Cards" by Mary Czapkowska with Free Frontend
 
 class Portfoliodisplay extends Component {
   render () {
