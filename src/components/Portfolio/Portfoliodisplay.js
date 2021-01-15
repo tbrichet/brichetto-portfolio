@@ -1,136 +1,54 @@
 
-import React from 'react';
-import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import project1 from './project1.png';
-import project2 from './project2.png';
+import React, { Component } from 'react';
+import project1 from './project1.jpg';
+import project2 from './project2.jpg';
 import project3 from './project3.jpg';
 import './portfolio.css';
 
-let imageArray = [
-  {
-    image: project1,
-    title:'Munch-A-Movie',
-    description:'description'
-  },
-  {
-    image: project2,
-    title:'MyHaus',
-    description:'description' 
-  },
-   {
-    image: project3,
-    title:"Mamasita's Enchiladas",
-    description:'description' 
-  } ,
-   {
-    image:'https://picsum.photos/id/1003/1181/1772',
-    title:'Project4',
-    description:'description' 
-  }
-]
-class Portfoliodisplay extends React.Component{
-  renderChildrenView = (item ,index) =>{
+
+
+class Portfoliodisplay extends Component {
+  render () {
     return (
-      <div className='contentBox' key={index}>
-        <div className='cardBox'>
-          <div 
-            style={{backgroundImage:`url(${item.image})`}} 
-            className="imageStyle"/> 
-          <div className='fontBox'>
-            <p className='titleStyle'>{item.title}</p>
-            <span>{item.description}</span>
+      <>
+      <section id="gallery">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 mb-4 d-flex align-items-sm-stretch">
+              <div className="card">
+                <img src={project1} alt className="card-img-top imagestyle" />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">Munch-A-Movie</h5>
+                  <p className="card-text">Collaborative bootcamp project built with HTML, CSS, Javascript, and server-side APIs</p><br />
+                  <a href="https://richardflores009.github.io/Munch-A-Movie/" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Visit Site</a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 mb-4 d-flex align-items-sm-stretch">
+              <div className="card">
+                <img src={project2} alt className="card-img-top imagestyle" />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">MyHaus</h5>
+                  <p className="card-text">Collaborative bootcamp project built with Node.js, Express, Handlebars, Sequelize, Bcrypt, and MySql2 </p><br />
+                  <a href="https://my-haus.herokuapp.com/" target="_blank"className="btn btn-outline-info btn-sm">Visit Site</a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 mb-4 d-flex align-items-sm-stretch">
+              <div className="card">
+                <img src={project3} alt className="card-img-top imagestyle" />
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">Mamasita's Enchiladas</h5>
+                  <p className="card-text">Collaborative bootcamp project built with MERN, Performant JavaScript, NoSQL, Apollo, and GraphQL</p><br />
+                  <a href="https://github.com/Richardflores009/group-project3" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Visit Site</a>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
-        
-     </div>
-    )
-  }
-  render(){
-    return(
-      <React.Fragment>
-         <Carousel 
-          dataArray = {imageArray }
-          autoplay={true}
-          delay={10}
-          carouselPostWidth={'400px'} 
-          carouselPostHeight={150}
-          carouselPostMargin={10}>
-          {this.renderChildrenView}
-          
-         
-          </Carousel>
-      </React.Fragment>
-    )
-  }
-}
+      </section>
+    </>
 
-
-
-class Carousel extends React.Component{
-  state = {
-    nowIndex:0,
-  }
-  componentDidMount(){
-    if(this.props.autoplay){
-      // this.autoPlay()
-    }
-  }
-  componentWillUnmount(){
-    clearInterval(this.timer)
-  }
-  autoPlay = () =>{
-    this.timer = setInterval(()=>{
-          this.changeImagePosition(2)
-     },this.props.delay*1000);
-  }
-
-  conputedLeft = () =>{
-    const {carouselPostWidth,carouselPostHeight,carouselPostMargin} = this.props
-    const {nowIndex} = this.state
-    console.log('nowIndex',nowIndex)
-    let leftSpan = parseInt(`${-nowIndex * parseInt(carouselPostWidth)}`)
-    return{
-      left: carouselPostWidth.toString().match(/[%vw]/) != null ? 
-      `calc(${leftSpan}% - ${carouselPostMargin*2*nowIndex}px)`: 
-      `${leftSpan - (carouselPostMargin*2*nowIndex)}px`
-    }
-  }
-  
-  changeImagePosition = (index) =>{
-     const {dataArray , block} = this.props
-     const {nowIndex} = this.state
-     // (1 + 1 + 3) % 3
-     this.setState({
-       nowIndex : (nowIndex + index +  dataArray.length) % dataArray.length
-     })
-  }
-  
-  render(){
-    const {dataArray,carouselPostMargin,carouselPostWidth,carouselPostHeight} = this.props
-    return(
-      <div className='carouselContainer'>
-        <div className="carouselArea">
-          <div style={this.conputedLeft()} className="carouselPosts">
-            {dataArray.map((imgaeUrl,index)=>{
-              return(
-               <div 
-                 key={imgaeUrl} 
-                  style={{
-                    width:carouselPostWidth, 
-                    height:carouselPostHeight,  
-                    margin:`0px ${carouselPostMargin}px `,...this.props.carouselPostStyle}} 
-                  className="carouselPostBox">
-                  {this.props.children(imgaeUrl,index)}
-               </div>
-              )
-            })}
-        </div>
-      </div>
-      
-        <div onClick={()=>this.changeImagePosition(-1)} className="controlLeft"><i className="fa fa-angle-left"  /></div>
-        <div onClick={()=>this.changeImagePosition(1)} className="controlRight"><i className="fa fa-angle-right" /></div>
-      </div>
     )
   }
 }

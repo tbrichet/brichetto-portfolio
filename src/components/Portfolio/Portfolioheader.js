@@ -3,9 +3,10 @@ import './portfolio.css'
 
 function Portfolioheader() {
   return (
-    <section>
-      <h1 className="background">Web Development Portfolio</h1>
-    </section>
+    <section id="portfolioheader" className="jumbotron text-center">
+        <h1 className="display-3">Portfolio</h1>
+        <p className="lead">Collection of independent and collaborative web projects</p>
+      </section>
   );
 }
 
