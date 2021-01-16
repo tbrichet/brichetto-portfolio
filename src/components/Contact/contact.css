@@ -1,0 +1,13 @@
+.contactBackground {
+    background: url('https://images.pexels.com/photos/1856437/pexels-photo-1856437.jpeg?cs=srgb&dl=pexels-dominika-roseclay-1856437.jpg&fm=jpg') center no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
+.contactForm {
+    width: 50%;
+    border: solid 1px;
+    border-color:lightgray;
+    padding: 10px;
+    margin: auto;
+    background-color:white;
+}

@@ -1,5 +1,8 @@
+.aboveFooter {
+    margin-bottom: 50px;
+}
+
 .footer {
-    margin: 50px;
     padding: 20px;
     box-shadow: 0 50vh 0 50vh #667a88;
 }

@@ -4,7 +4,7 @@ import './home.css'
 
 function Homeimage() {
   return (
-    <section id="hero" className="d-flex align-items-center">
+    <section id="hero" className="d-flex align-items-center aboveFooter">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">

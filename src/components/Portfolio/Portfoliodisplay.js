@@ -11,7 +11,7 @@ class Portfoliodisplay extends Component {
   render () {
     return (
       <>
-      <section id="gallery">
+      <section id="gallery" className="aboveFooter">
         <div className="container">
           <div className="row">
             <div className="col-lg-4 mb-4 d-flex align-items-sm-stretch">

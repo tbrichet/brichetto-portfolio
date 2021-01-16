@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './contact.css'
 
 // Code adapted from Michael Burrows - W3 Collective
 
@@ -25,21 +26,23 @@ const ContactForm = () => {
     alert(result.status);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" required />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" required />
-      </div>
-      <button type="submit">{status}</button>
-    </form>
+      <div className="contactBackground">
+        <form onSubmit={handleSubmit} className="contactForm">
+            <div className="form-group">
+                <label htmlFor="name">Your Name:</label>
+                <input type="text" className="form-control" id="name" required />
+            </div>
+            <div className="form-group">
+                <label htmlFor="email">Your Email:</label>
+                <input type="email" className="form-control" id="email" required />
+            </div>
+            <div className="form-group">
+                <label htmlFor="message">Message:</label>
+                <textarea className="form-control" id="message" required />
+            </div>
+            <button className="btn btn-outline-info btn-sm mt-auto" type="submit">{status}</button>
+        </form>
+    </div>
   );
 };
 
