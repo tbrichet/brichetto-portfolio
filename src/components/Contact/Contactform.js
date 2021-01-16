@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// Code adapted from Michael Burrows - W3 Collective
+
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {

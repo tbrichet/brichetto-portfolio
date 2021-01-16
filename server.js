@@ -1,3 +1,5 @@
+// Code adapted from Michael Burrows - W3 Collective
+
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
@@ -35,7 +37,7 @@ const contactEmail = nodemailer.createTransport({
     const message = req.body.message; 
     const mail = {
       from: name,
-      to: "***************@gmail.com",
+      to: emailAddress,
       subject: "Contact Form Submission",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
