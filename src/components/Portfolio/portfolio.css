@@ -1,6 +1,9 @@
 #portfolioheader {
-    background: url('https://images.pexels.com/photos/305827/pexels-photo-305827.jpeg?cs=srgb&dl=pexels-scott-webb-305827.jpg&fm=jpg') center center / cover no-repeat ;
-    color: white;
+  margin: 0px;
+}
+
+.portfolioBackground {
+    background-color: #f4f4f4;
   }
 
 .imagestyle {
@@ -9,6 +12,6 @@
    object-fit: cover;
 }
 
-.buttonstyle {
-    color: black;
+.portfolioContainer {
+  padding-bottom: 20px;
 }
