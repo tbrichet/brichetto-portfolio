@@ -1,7 +1,18 @@
+.contactHeader {
+    background-color: #f4f4f4;
+    margin-bottom: -30px;
+}
+
+.contactContainer {
+    height: 600px;
+}
+
 .contactBackground {
-    background: url('https://images.pexels.com/photos/1856437/pexels-photo-1856437.jpeg?cs=srgb&dl=pexels-dominika-roseclay-1856437.jpg&fm=jpg') center no-repeat;
+    background: url('./contactBgImg.jpg') center no-repeat;
     background-size: cover;
     padding: 10px;
+    vertical-align: middle;
+    height: 100%;
 }
 .contactForm {
     width: 50%;
@@ -10,4 +21,20 @@
     padding: 10px;
     margin: auto;
     background-color:white;
+}
+
+.photoCredit {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.photoCredit a {
+    text-decoration: none;
+    color: darkslategray;
+    vertical-align: bottom;
+    display: inline;
+    text-align: right;
+    font-style: italic;
+    font-size: xx-small;
+    
 }
