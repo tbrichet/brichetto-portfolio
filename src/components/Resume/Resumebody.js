@@ -1,5 +1,16 @@
 import React from 'react';
 import './resume.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faTools, faUserGraduate, faFileInvoice, faUniversity, faGlobeAmericas, faGuitar } from '@fortawesome/free-solid-svg-icons'
+
+const languageIcon = <FontAwesomeIcon icon={faGlobeAmericas} size="lg"/>
+const interestIcon = <FontAwesomeIcon icon={faGuitar} size="lg"/>
+const edCareerIcon = <FontAwesomeIcon icon={faUniversity} size="lg"/>
+const techCareerIcon = <FontAwesomeIcon icon={faFileInvoice} size="lg"/>
+const educationIcon = <FontAwesomeIcon icon={faUserGraduate} size="lg"/>
+const skillsIcon = <FontAwesomeIcon icon={faTools} size="lg"/>
+const codeIcon = <FontAwesomeIcon icon={faCode} size="lg"/>
+
 
 function Resumebody() {
   return (
@@ -9,15 +20,18 @@ function Resumebody() {
           <h3 className="text-lg leading-6 font-medium text-gray-900">
             Tara Brichetto
           </h3>
-          <p className="mt-1 max-w-2xl text-sm text-gray-500">
+          <p className="mt-1 max-w-2xl text-med text-gray-500">
             Full Stack Software Developer
           </p>
         </div>
         <div className="border-t border-gray-200">
           <dl>
             <div className="alternating-bg px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
+              <dt className="text-med font-medium text-gray-500">
+                <div>
                 Competencies
+                <p className="resumeIcon">{codeIcon}</p>
+                </div>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <ul className="resume-ul">
@@ -37,8 +51,9 @@ function Resumebody() {
               </dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
+              <dt className="text-med font-medium text-gray-500">
                 Additional Skills
+                <p className="resumeIcon">{skillsIcon}</p>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <ul className="resume-ul">
@@ -57,8 +72,9 @@ function Resumebody() {
               </dd>
             </div>
             <div className="alternating-bg px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
+              <dt className="text-med font-medium text-gray-500">
                 Education History
+                <p className="resumeIcon">{educationIcon}</p>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <p className="title-text">University of Arizona</p>
@@ -70,8 +86,9 @@ function Resumebody() {
               </dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
-              Career History | Technology and Finance
+              <dt className="text-med font-medium text-gray-500">
+                Career History | Technology and Finance
+                <p className="resumeIcon">{techCareerIcon}</p>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <p className="title-text">Chief of Staff</p>
@@ -82,8 +99,9 @@ function Resumebody() {
               </dd>
             </div>
             <div className="alternating-bg px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
-              Career History | Education
+              <dt className="text-med font-medium text-gray-500">
+                Career History | Education
+                <p className="resumeIcon">{edCareerIcon}</p>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <p className="title-text">Academic Associate</p>
@@ -91,6 +109,12 @@ function Resumebody() {
                 <br />
                 <p className="title-text">Tutor</p>
                 <p>Varsity Tutors, Freelance | Apr 2014 - Present</p>
+                <br />
+                <p className="title-text">Academic Coach</p>
+                <p>Teacher Retention Project | Sep 2014 - May 2015</p>
+                <br />
+                <p className="title-text">Content Specialist</p>
+                <p>Teach for America | Jul 2014 - May 2015</p>
                 <br />
                 <p className="title-text">Local Coordinator</p>
                 <p>Council on International Educational Exchange | May 2014 - May 2017</p>
@@ -106,8 +130,9 @@ function Resumebody() {
               </dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
-                Languages
+              <dt className="text-med font-medium text-gray-500">
+                  Languages
+                <p className="resumeIcon">{languageIcon}</p>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <ul className="resume-ul">
@@ -119,8 +144,9 @@ function Resumebody() {
               </dd>
             </div>
             <div className="alternating-bg px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">
-              Interests
+              <dt className="text-med font-medium text-gray-500">
+                Interests
+                <p className="resumeIcon">{interestIcon}</p>
               </dt>
               <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
               <ul className="resume-ul">

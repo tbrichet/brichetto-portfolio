@@ -1,5 +1,6 @@
 #resumeheader {
     margin: 0px;
+    background-color: #f4f4f4;
 }
 
 .pdf-link {
@@ -8,8 +9,11 @@
 }
 
 .resume-background {
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background: url('./Japanbg4.png') center;
+    background-size: auto 100%;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .resume-body {
@@ -27,5 +31,12 @@
 }
 
 .alternating-bg {
-    background-color: #dadee9;
+    /* background-color: #dadee9; */
+    background-color: ghostwhite;
+}
+
+.resumeIcon {
+    padding-top: 10px;
+    padding-left: 5px;
+    color: #9da1aa;
 }
