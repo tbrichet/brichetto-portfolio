@@ -1,4 +1,31 @@
+#resumeheader {
+    margin: 0px;
+}
+
+.pdf-link {
+    color: #7e6688;
+    font-style: italic;
+}
+
+.resume-background {
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+}
+
+.resume-body {
+    width: 75%;
+    margin: auto;
+}
+
 .resume-ul li {
     color: black;
     padding-left: 0px;
+}
+
+.title-text {
+    font-weight: bold;
+}
+
+.alternating-bg {
+    background-color: #dadee9;
 }

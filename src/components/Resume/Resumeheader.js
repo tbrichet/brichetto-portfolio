@@ -1,10 +1,12 @@
 import React from 'react';
+import PDF from './resume.pdf';
+import './resume.css'
 
 function Resumeheader() {
   return (
-    <section id="resumeheader" className="jumbotron text-center">
+    <section id="resumeheader" className="jumbotron text-center resume-background">
         <h1 className="display-3">Resume</h1>
-        <p className="lead">Click for PDF</p>
+        <p className="lead"><a href = {PDF} className="pdf-link" target="_blank">Click for PDF</a></p>
     </section>
   );
 }
