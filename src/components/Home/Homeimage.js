@@ -15,7 +15,7 @@ function Homeimage() {
             <p>Dedicated full stack web developer and recent graduate of the University of Arizona's coding bootcamp. Proven success working individually and in teams with additional experience in education, finance, and business administration. Always learning, and always coding!</p>
           </div>
           <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay={200}>
-          <img src={portfolioimage} className="img-fluid animated" alt />
+          <img src={portfolioimage} className="img-fluid animated" alt="placeholder" />
           </div>
         </div>
       </div>
