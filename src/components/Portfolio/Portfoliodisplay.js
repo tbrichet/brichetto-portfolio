@@ -22,7 +22,7 @@ class Portfoliodisplay extends Component {
                 <img src={project1} alt="placeholder" className="card-img-top imagestyle" />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Munch-A-Movie</h5>
-                  <p className="card-text">Collaborative bootcamp project built with HTML, CSS, Javascript, and server-side APIs</p><br />
+                  <p className="card-text">Collaborative project allowing users to pair movies with dinner recipes. Built with HTML, CSS, Javascript, and server-side APIs</p><br />
                   <a href="https://richardflores009.github.io/Munch-A-Movie/" rel="noreferrer noopener" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Visit Site</a> <br />
                   <a href="https://github.com/Richardflores009/Munch-A-Movie" rel="noreferrer noopener" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Github Repository</a>
                 </div>
@@ -33,7 +33,7 @@ class Portfoliodisplay extends Component {
                 <img src={project2} alt="placeholder" className="card-img-top imagestyle" />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">MyHaus</h5>
-                  <p className="card-text">Collaborative bootcamp project built with Node.js, Express, Handlebars, Sequelize, Bcrypt, and MySql2 </p><br />
+                  <p className="card-text">Collaborative project serving as a user portal for landlords and residents. Built with Node.js, Express, Handlebars, Sequelize, Bcrypt, and MySql2 </p><br />
                   <a href="https://my-haus.herokuapp.com/" target="_blank" rel="noreferrer noopener" className="btn btn-outline-info btn-sm">Visit Site</a> <br />
                   <a href="https://github.com/Richardflores009/MyHaus" rel="noreferrer noopener" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Github Repository</a>
                 </div>
@@ -44,7 +44,7 @@ class Portfoliodisplay extends Component {
                 <img src={project3} alt="placeholder" className="card-img-top imagestyle" />
                 <div className="card-body d-flex flex-column">
                   <h5 className="card-title">Mamasita Empanadas</h5>
-                  <p className="card-text">Collaborative bootcamp project built with MERN, Performant JavaScript, NoSQL, Apollo, and GraphQL</p><br />
+                  <p className="card-text">Collaborative project serving as an interactive site for a local restaurant. Built with MERN, Performant JavaScript, NoSQL, Apollo, and GraphQL</p><br />
                   <a href="https://mamasita-empanadas.herokuapp.com//" rel="noreferrer noopener" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Visit Site</a> <br />
                   <a href="https://github.com/Richardflores009/Mamasita-Empanadas" rel="noreferrer noopener" target="_blank" className="btn btn-outline-info btn-sm mt-auto">Github Repository</a>
               </div>
